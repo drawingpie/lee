@@ -6,7 +6,60 @@
     <title>repl.it</title>
 		<link rel="stylesheet" href="css/reset.css">
     <style>
-		
+		.wrap {
+      width: 1024px;
+      margin: 0 auto;
+    }
+    .header {
+      height: 100px;
+      background: #246c84;
+    }
+    .container {
+      display: table;
+      width: 100%;
+    }
+    .container .content {
+      height: 300px;
+      background: #cd3637;
+      display: table-cell;
+    }
+    .container .aside {
+      background: #f98903;
+      display: table-cell;
+      width: 400px;
+    }
+    .footer {
+      height: 50px;
+      background: #000;
+    }
+
+    /* tablet */
+    @media all and (max-width:1024px) {
+      .wrap {
+      width: 768px;
+    }
+    .container .aside {
+      width: 200px;
+    }
+    }
+    /* mobile */
+    @media all and (max-width:768px) {
+      .wrap {
+      width: 100%;
+    }
+    .container {
+      display: block;
+    }
+    .container .content {
+     
+      display: block;
+    }
+    .container .aside {
+     height: 200px;
+     display: block;
+     width: auto;
+   }
+    }
 		</style>
   </head>
   <body>

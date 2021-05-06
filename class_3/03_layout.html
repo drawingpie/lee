@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>html</title>
-		<link rel="stylesheet" href="css/reset.css">
-		<style>
-			body, h1{margin:0}
-			a{color:#fff}
 
-			.header{
-				background:#333;
-				color:#fff;
-				padding:20px;
-			}
-		</style>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>html</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/layout.css">
 
-  </head>
-  <body>
-		<div class="wrap">
-			<div class="header">
-				<h1>logo</h1>
-				<div class="nav">
-					<a href="#">menu1</a>
-					<a href="#">menu2</a>
-					<a href="#">menu3</a>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<h1>logo</h1>
+			<div class="nav">
+				<a href="#">menu1</a>
+				<a href="#">menu2</a>
+				<a href="#">menu3</a>
+			</div>
+		</div>
+		<!-- e:header -->
+		<div class="container">
+			<div class="section visual">
+				<div class="unit">
+					<strong class="txt_tit">첫번쨰 문구</strong>
+					<p class="txt_titsibs_1">첫번쨰 문구 애니메이션입니다.</p>
+					<p class="txt_titsibs_2">첫번쨰 문구 애니메이션입니다.</p>
 				</div>
 			</div>
-			<div class="container">
-					<div class="section"></div>
-					<div class="aside"></div>
+			<!-- e:section -->
+			<div class="section box">
+				<div class="unit"></div>
+				<div class="unit"></div>
+				<div class="unit"></div>
 			</div>
-			<div class="footer"></div>
+			<!-- e:section -->
+			<div class="section table">
+				<div class="tablebox">
+					<div class="row">
+						<div class="label"></div>
+						<div class="input">
+							<input type="text">
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="label"></div>
+						<div class="input">
+							<input type="text">
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- e:section -->
+			<div class="aside"></div>
 		</div>
-  </body>
+		<!-- e:container -->
+		<div class="footer"></div>
+	</div>
+	<!-- e:footer -->
+</body>
+
 </html>
