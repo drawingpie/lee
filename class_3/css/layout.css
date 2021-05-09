@@ -17,12 +17,12 @@ body,
         .container {
 			padding: 20px;
         }
-		.container .section.visual {
+		.container .section + .section {
 			margin-top: 30px;
         }
 		/* .section.visual */
-        .container .section + .section {
-			background: #aaa;
+		.container .section.visual {
+			background: #3f51b5;
 			height: 200px;
         }
 		.container .section.visual .unit {
@@ -33,10 +33,10 @@ body,
         .container .section.visual .unit .txt_tit {
             font-size: 50px;
         }
-        .container .section.visual .unit .txt_titsibs_1 {
+        .container .section.visual .unit .txt_subs_1 {
             font-size: 35px;
         }
-		.container .section.visual .unit .txt_titsibs_2 {
+		.container .section.visual .unit .txt_subs_2 {
             font-size: 20px;
         }
 		.container .section.box {
@@ -55,4 +55,79 @@ body,
 		}
 		.container .section.box .unit + .unit {
 			margin-left: 20px;
+		}
+		
+		.section.table .tablebox {
+			border-top: 1px solid #eee;
+		}
+		.section.table .tablebox .row{
+			border-bottom: 1px solid #eee;
+			display: table;
+			width: 100%;
+		}
+		.section.table .tablebox .row .label{
+			display: table-cell;
+			background: #aaa;
+			width: 200px;
+			padding: 10px;
+			box-sizing: border-box;
+			
+		}
+		.section.table .tablebox .row .input{
+			display: table-cell;
+			padding: 10px;
+			
+		}
+		.section.table .tablebox .row .input > input[type=text]{
+			width: 100%;
+			box-sizing: border-box;
+			height: 30px;
+		}
+		/* mobile */
+		@media all and (max-width:768px) {
+			.container .section.visual .unit {
+				padding-top: 68px;
+			}
+			.container .section.visual .unit .txt_tit {
+				font-size: 35px;
+			}
+			.container .section.visual .unit .txt_subs_1 {
+				font-size: 10px;
+			}
+			.container .section.visual .unit .txt_subs_2 {
+				font-size: 15px;
+			}
+			.container .section.box{
+				height: auto;
+				padding: 30px 10px;
+			}
+			.container .section.box .unit {
+				display: block;
+				width: auto;
+				margin-left: 0 !important;
+			}
+			.container .section.box .unit + .unit {
+				margin: 10px 0 0 0;
+
+			}
+			.section.table .tablebox {
+				border: none;
+			}
+			.section.table .tablebox .row + .row  {
+				margin-top: 25px;
+			}
+			.section.table .tablebox .row {
+				display: block;
+				border: none;
+			}
+			.section.table .tablebox .row .label {
+				display: block;
+				width: auto;
+				background: transparent;
+				padding: 0 0 5px 0;
+			}
+			.section.table .tablebox .row .input {
+				display: block;
+				padding: 0;
+			}
 		}
