@@ -13,10 +13,26 @@
 		</style>
 		<script>
       $(function(){
-        
-      });
+        //애니메이션 효과
+        // $(".wrap .print").animate({
+        //   width:"200",
+        //   height:"200"
+        // },3000)
 
-      
+        //click
+        // $(".wrap .print").click(function(){
+        //   $(".wrap .print").animate({
+        //   width:"200",
+        //   height:"200"
+        // });
+
+        //keypress
+        $(".wrap .ipt").keypress(function(event){
+          var val = event.key;//내가 누른 키값 저장
+          $(".wrap .print").text(val);//저장된 키값을 박스에 쓰기
+        });
+      });
+     
 		</script>
   </head>
   <body>

@@ -8,11 +8,15 @@
     <script src="js/jquery-1.8.3.min.js"></script>
 		<style>
 			.wrap{padding:50px;text-align:center;}
-			.wrap .box{height:200px; background:#da56be; display: none;}
+			.wrap .box{height:200px; background:#da56be; }
 		</style>
 		<script>
       $(function(){
-        
+        // $(".wrap .box").slideUp();
+        //나타내는효과
+        // $(".wrap .box").slideDown(3000);
+        //사라지거나 나타내는 효과
+        $(".wrap .box").slideToggle(1000);
       });
 
       
