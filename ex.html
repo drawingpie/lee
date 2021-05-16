@@ -1,0 +1,43 @@
+<script type="text/javascript" src="../js/jquery.js"></script>                         
+ 
+<script type="text/javascript">
+    //$(document).ready(function(){}); 과 같음.
+    $(function() {
+        var sel = "<select id=dan>";
+ 
+        for (var i = 2; i <= 9; i++) {
+            sel += "<option value="+i+">" + i + "단</option>";
+        }
+        sel += "</select>";
+ 
+        $('.area').append(sel);
+ 
+        
+        //"#view"
+        $("#view").click(function() {
+ 
+            alert($("#dan").val()+"단");
+            
+            var dan = $("#dan").val();
+            
+            
+            var str ="<br>["+ dan + "단]<br><br>";
+            for (var i = 1; i <= 9; i++) {
+ 
+                var r = dan * i;
+ 
+                str += dan + "*" + i + "=" + r + "<br>";
+ 
+            }
+            str += "<br><br>";
+            
+            
+            //결과 값이 추가되어 표시
+            $("#result").append(str);
+            
+            //결과 값 표시후 다른 값이 오면 지워지고 다른 값이 표시
+            //$("#result").empty().append(str);
+        });
+ 
+    });
+</script>
