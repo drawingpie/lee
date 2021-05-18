@@ -9,14 +9,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <script>
-        $(".number_ipt").ready(function () {
-            for (var a = 1; a < 10; a++) {
-                for (var b = 1; b < 10; b++) {
-                    $(".result > p").append('<strong class="value_total">' + a * b + '</strong>');
-                }
-            }
+        $(function () {
+                $(".btn_submit").click(function () {
+                   for (var i = 2; i < 10; i++) {
+                        $(".result").append('<p>' + i + '단' + '</p>');
+                        for (var j = 1; j < 10; j++) {
+                            $(".result").append('<p>'+i + 'X' + j + '=' + i * j+'</p>');
+                        }
+                    }
+                });
         });
-
+        
     </script>
 
     <style>
@@ -25,53 +28,55 @@
         }
 
         .container {
-            width: 100%;
-            height: 500px;
-            background: coral;
-            margin: 0 auto;
+            max-width: 1440px;
+            box-sizing: border-box;
+            margin: 50px auto;
             text-align: center;
+            
         }
 
-        .number .number_ipt {
+        /* .number_ipt {
             width: 200px;
-            height: 200px;
-            border: 1px solid #fff;
+            height: 150px;
+            border: 1px solid #aaa;
             background: #fff;
-            margin-top: 50px;
-        }
-
-        .number input {
             font-size: 150px;
             text-align: center;
-            color: tomato;
-        }
+            color: #000;
+        } */
 
-        .cross {
-            font-size: 150px;
-            margin-top: 40px;
-            margin: 0 20px;
-            color: #fff;
+        span {
+            display: block;
+            font-size: 50px;
+            margin: 40px 0 0 0;
+            color: #aaa;
         }
-
-        .btn_submit {
-            margin-top: 50px;
+        button {
+            display: block;
+            margin: 50px auto;
             width: 150px;
             height: 50px;
-            border: 1px solid yellow;
+            border: 1px solid #aaa;
             border-radius: 50px;
-            background: yellow;
+            background: #aaa;
             font-size: 25px;
-        }
-
-        .btn_submit:hover {
-            border: 1px solid yellowgreen;
-            background: yellowgreen;
-        }
-
-        .result p {
-            font-size: 50px;
             color: #fff;
-            margin-top: 50px;
+        }
+        button:hover {
+            border: 1px solid #acc;
+            background: #acc;
+        }
+        .result {
+            display: inline-block;
+            margin-right: 220px;
+            margin: 0 auto;
+        }
+        .result p {
+            display: block;
+            font-size: 50px;
+            color: #aaa;
+            margin: 10px 0;
+            margin: 0 auto;
         }
     </style>
 
@@ -79,18 +84,12 @@
 
 <body>
     <div class="container">
-        <div class="number">
-            <input type="text" class="number_ipt" />
-            <span class="cross">x</span>
-            <input type="text" class="number_ipt" />
-        </div>
-        <div class="number_btn">
-            <button class="btn_submit">클릭</button>
-        </div>
-        <div class="result">
-            <p>값 = <strong class="value_total">0</strong></p>
-        </div>
+        <span>구구단</span>
+        <button class="btn_submit">클릭</button>
+        <div class="result"> </div>
     </div>
+    
+
 </body>
 
 </html>
