@@ -10,17 +10,27 @@
 
     <script>
         $(function () {
-                $(".btn_submit").click(function () {
-                   for (var i = 2; i < 10; i++) {
-                        $(".result").append('<p>' + i + '단' + '</p>');
-                        for (var j = 1; j < 10; j++) {
-                            $(".result").append('<p>'+i + 'X' + j + '=' + i * j+'</p>');
-                        }
+                $("input[type=number]").change(function () {
+                    var i = $(this).val();
+                    if ( i < 10 ) {
+                        $(".btn_submit").click(function () {
+                            $(".result").append('<p>' + i + '단' + '</p>');
+                        });
                     }
                 });
-        });
-        
+            });
+
     </script>
+    <!-- <script>
+        $(".btn_submit").click(function () {
+                for (var i = 2; i < 10; i++) {
+                    $(".result").append('<p>' + i + '단' + '</p>');
+                    for (var j = 1; j < 10; j++) {
+                        $(".result").append('<p>' + i + 'X' + j + '=' + i * j + '</p>');
+                    }
+                }
+            });
+    </script> -->
 
     <style>
         body {
@@ -32,10 +42,9 @@
             box-sizing: border-box;
             margin: 50px auto;
             text-align: center;
-            
         }
 
-        /* .number_ipt {
+        .dan {
             width: 200px;
             height: 150px;
             border: 1px solid #aaa;
@@ -43,7 +52,7 @@
             font-size: 150px;
             text-align: center;
             color: #000;
-        } */
+        }
 
         span {
             display: block;
@@ -85,11 +94,10 @@
 <body>
     <div class="container">
         <span>구구단</span>
+        <input type="number" class="dan">
         <button class="btn_submit">클릭</button>
         <div class="result"> </div>
     </div>
-    
-
 </body>
 
 </html>

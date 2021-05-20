@@ -23,7 +23,6 @@ $(function () {
         $(".section.complete").hide();
         $(".box_intro").show();
     });
-
 })
 
 //인트로 함수
