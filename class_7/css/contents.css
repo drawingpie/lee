@@ -66,7 +66,7 @@
     border-right: 0px;
     border-left: 8px solid #fee600;
     left: auto;
-    right:-8px;
+    right: -8px;
     
 }
 .chat_area .item.mymsg .box .msg {
@@ -104,7 +104,7 @@
     border-radius: 5px;
     padding-left: 10px;
 }
-.input_area input[type="text"] +input[type="text"] {
+.input_area input[type="text"] + input[type="text"] {
     margin-top: 5px;
 }
 .input_area input[type="text"]::placeholder{
