@@ -32,7 +32,7 @@ $(function () {
 
             //채팅창 맨 밑으로 갈수 있게 하는 스크롤 이벤트
             var _itemH = 0;//말풍선(item)들의 각각의  높이를 더해 줄 변수
-         //rach(반복문)을 통해 선택한 각요소들의 높이값을 체크 할 수 있음
+            //each(반복문)을 통해 선택한 각요소들의 높이값을 체크 할 수 있음
             $(".chat_area .item").each(function(index){
                 // console.log($(this).height());
                 _itemH += $(this).height() + 15
